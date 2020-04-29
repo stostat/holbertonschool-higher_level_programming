@@ -1,7 +1,10 @@
 #include "lists.h"
-#include <stdlib.h>
-
-
+/**
+ * listint_t - adds node between minor and bigger number
+ * @head: pointer to head of linked list
+ * @number: number inserted in node
+ * Return: node
+ */
 listint_t *insert_node(listint_t **head, int number)
 {
 	listint_t *tmp = *head;
