@@ -1,4 +1,9 @@
 #include "lists.h"
+/**
+* is_palindrome - checks for palindromes 
+* @head: pointer to the head
+*Return: 1 if true 0 if false
+*/
 
 int is_palindrome(listint_t **head)
 {
@@ -9,10 +14,10 @@ int is_palindrome(listint_t **head)
 	if (!hd || !hd->next)
 		return (1);
 
-	while (tail)
+	while (hd)
 	{
-		nval[i] = tail->n;
-		tail = tail->next;
+		nval[i] = hd->n;
+		hd = hd->next;
 		i++;
 	}
 
