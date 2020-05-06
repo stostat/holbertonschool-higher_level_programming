@@ -11,7 +11,7 @@ int is_palindrome(listint_t **head)
 	int i = 0, j = 0;
 	int nval[1024];
 
-	if (!hd || !hd->next)
+	if (!*head || !((*head)->next))
 		return (1);
 
 	while (hd)
