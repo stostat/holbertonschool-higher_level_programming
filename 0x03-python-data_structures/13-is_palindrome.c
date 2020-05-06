@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
-* is_palindrome - checks for palindromes 
+* is_palindrome - checks for palindromes
 * @head: pointer to the head
 *Return: 1 if true 0 if false
 */
