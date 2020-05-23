@@ -1,45 +1,109 @@
+=======================================
+add_integer test in  0-add_integer.py
+=======================================
 
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
->>> factorial(-1)
-    Traceback (most recent call last):
-        ...
-    ValueError: n must be >= 0
+function:
+``add_integer()``
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod()
+Usage
+=======
+
+``add_integer()`` returns the sum of its arguments.  For numbers,
+that value is equivalent to using the ``+`` operator.
+
+::
+
+    >>> add_integer = __import__("0-add_integer").add_integer
+
+::
+tests with only one value
+::
+
+    >>> add_integer(0)
+    98
+
+    >>> add_integer(-1.27)
+    96
+
+    >>> add_integer(2)
+    100
+
+:: 
+test with no value or bad syntax
+::
+
+    >>> add_integer()
+    Traceback (most recent call last):
+    TypeError: add_integer() missing 1 required positional argument: 'a'
+
+    >>> add_integer(, 0)
+    Traceback (most recent call last):
+    SyntaxError: invalid syntax
+
+    >>> add_integer(12, None)
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+    >>> add_integer(None, None)
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(4, 5)
+    9
+
+::
+Test with different type of value
+::
+
+    >>> add_integer('a')
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer(0, 'nine')
+    Traceback (most recent call last):
+    TypeError: b must be an integer
+
+::
+Test with more arguments
+::
+
+    >>> add_integer(1, 98, 3)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+    
+    >>> add_integer(1, "ninety", 3)
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+
+    >>> add_integer('mine', 'a', 'b')
+    Traceback (most recent call last):
+    TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
+
+::
+Test with list, tuple, dictionary given
+::
+
+    >>> add_integer([1,3])
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer((1,3))
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+    >>> add_integer({'k1': 98, 'k2': 100})
+    Traceback (most recent call last):
+    TypeError: a must be an integer
+
+::
+Test casting
+::
+
+    >>> add_integer(float(98))
+    196
+
+    >>> add_integer(float('abc'))
+    Traceback (most recent call last):
+    ValueError: could not convert string to float: 'abc'
