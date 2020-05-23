@@ -1,0 +1,60 @@
+===========================================
+3-say_my_name test in  3-say_my_name.py
+===========================================
+
+function:
+``say_my_name()``
+
+Usage
+=======
+
+``say_my_name()`` prints first and last name.
+
+::
+Test with valid arguments:
+::
+	>>> say_my_name("John", "Doe")
+	My name is John Doe
+
+    >>> say_my_name("", "Jane")
+    My name is  Jane
+
+    >>> say_my_name("")
+    My name is
+
+    >>> say_my_name("", "")
+    My name is
+
+    >>> say_my_name("     ")
+    My name is       
+
+::
+Invalid arguments:
+::
+	>>> say_my_name("John", "Doe", "Holberton")
+	Traceback (most recent call last):
+	TypeError: say_my_name() takes from 1 to 2 positional arguments but 3 were given
+
+	>>> say_my_name("Jane", 0)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name(0, "Jane")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> say_my_name("Jane", None)
+	Traceback (most recent call last):
+	TypeError: last_name must be a string
+
+	>>> say_my_name(None, "John")
+	Traceback (most recent call last):
+	TypeError: first_name must be a string
+
+	>>> f = __import__("3-say_my_name").say_my_name.__doc__
+	>>> len(f) > 1
+	True
+
+	>>> m = __import__("3-say_my_name").__doc__
+	>>> len(m) > 1
+	True
