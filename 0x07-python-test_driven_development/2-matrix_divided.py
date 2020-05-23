@@ -18,5 +18,5 @@ def matrix_divided(matrix, div):
         raise TypeError("div must be a number")
     if div == 0:
         raise ZeroDivisionError("division by zero")
-    new = [[x / div for x in s] for s in matrix]
+    new = [[round(x / div, 2) for x in s] for s in matrix]
     return new
