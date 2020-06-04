@@ -5,11 +5,11 @@ import json
 
 def load_from_json_file(filename):
     """
-    loads json file to object in python.
+    Load json file to object in python.
 
     Args:
     filename - File to be opened
     return: None
     """
     with open(filename) as fp:
-        data = json.load(fp)
+        json.load(fp)
