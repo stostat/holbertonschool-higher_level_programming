@@ -6,7 +6,9 @@ def read_lines(filename="", nb_lines=0):
     """
     Read a file and coubts its lines.
 
-    Args: filename- file to open
+    Args:
+    filename- file to open
+    nb_lines: number of lines to be printed
     return: Conter
     """
     i = 0
