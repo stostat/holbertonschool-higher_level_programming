@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""Program that loads json file to object in python."""
+"""Program that adds item to json file."""
+
 import sys
 from os import path
 save_to_json_file = __import__('7-save_to_json_file.py').save_to_json_file
