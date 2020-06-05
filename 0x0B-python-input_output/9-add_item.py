@@ -1,14 +1,15 @@
 #!/usr/bin/python3
 """Script that adds item to json file."""
+
 import sys
 import json
-from os import path
+import os.path as check
 
 save_to_json_file = __import__('7-save_to_json_file.py').save_to_json_file
 load_from_json_f = __import__('8-load_from_json_file.py').load_from_json_file
 
 file = "add_item.json"
-if path.exists(file):
+if check.exists(file):
     list_args = load_from_json_f(file)
 else:
     list_args = []
