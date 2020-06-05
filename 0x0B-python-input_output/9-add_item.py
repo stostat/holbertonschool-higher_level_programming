@@ -7,7 +7,7 @@ save = __import__('7-save_to_json_file').save_to_json_file
 
 filename = 'add_item.json'
 try:
-    py_list = load(filename)
+    py_l = load(filename)
 except Exception:
     py_l = []
 finally:
