@@ -13,4 +13,4 @@ except Exception:
 finally:
     for i in sys.argv[1:]:
         py_l.append(i)
-    save(py_list, filename)
+    save(py_l, filename)
