@@ -82,3 +82,10 @@ class Rectangle(Base):
         return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
                                                        self.__y, self.__width,
                                                        self.__height)
+
+    def update(self, *args):
+        """Update that receives args."""
+        measures = ['id', 'width', 'height', 'x', 'y']
+        if args is not None:
+            for i in range(len(args)):
+                setattr(self, measures[i], args[i])
