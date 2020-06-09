@@ -29,7 +29,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """Update that receives args."""
-        measures = ['id', 'width', 'x', 'y']
+        measures = ['id', 'width', 'height' 'x', 'y']
         if args is not None and len(args) != 0:
             for i in range(len(args)):
                 setattr(self, measures[i], args[i])
