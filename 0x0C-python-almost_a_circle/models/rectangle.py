@@ -72,10 +72,13 @@ class Rectangle(Base):
 
     def display(self):
         """Display of a rectangle with hashtags."""
-        for i in range(self.height):
-            for j in range(self.__width):
-                print('#', end='')
+        for k in range(self.__y):
             print()
+        for i in range(self.height):
+            print(self.__x * ' ' + self.__width * '#')
 
     def __str__(self):
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height)
+        """Override of the str method."""
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.__y, self.__width,
+                                                       self.__height)
