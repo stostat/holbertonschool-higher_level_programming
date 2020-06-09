@@ -96,3 +96,8 @@ class Rectangle(Base):
         else:
             for k, v in kwargs.items():
                 setattr(self, k, v)
+
+    def to_dictionary(self):
+        """Update to dictionary."""
+        return {'id': self.id, 'width': self.width, 'height': self.height,
+                'x': self.x, 'y': self.y}
