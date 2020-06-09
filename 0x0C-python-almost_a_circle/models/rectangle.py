@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Rectangle module module."""
+"""Rectangle module."""
 from models.base import Base
 
 
@@ -21,6 +21,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
+        """Set attribute."""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -34,6 +35,7 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, value):
+        """Set attribute."""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -47,6 +49,7 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, value):
+        """Set attribute."""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -60,6 +63,7 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, value):
+        """Set attribute."""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -83,9 +87,12 @@ class Rectangle(Base):
                                                        self.__y, self.__width,
                                                        self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Update that receives args."""
         measures = ['id', 'width', 'height', 'x', 'y']
-        if args is not None:
+        if args is not None and len(args) != 0:
             for i in range(len(args)):
                 setattr(self, measures[i], args[i])
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
