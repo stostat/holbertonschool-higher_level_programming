@@ -7,18 +7,18 @@
 
 int check_cycle(listint_t *list)
 {
-listint_t *turtle = NULL;
-listint_t *hare = NULL;
+	listint_t *turtle = NULL;
+	listint_t *hare = NULL;
 
-turtle = list;
-hare = list;
+	turtle = list;
+	hare = list;
 
-while (list && hare && hare->next && hare->next->next)
-{
-turtle = turtle->next;
-hare = hare->next->next;
-if (turtle == hare)
-return (1);
-}
-return (0);
+	while (list && hare && hare->next && hare->next->next)
+	{
+		turtle = turtle->next;
+		hare = hare->next->next;
+		if (turtle == hare)
+		return (1);
+	}
+	return (0);
 }
