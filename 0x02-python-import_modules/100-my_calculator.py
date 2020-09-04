@@ -24,4 +24,5 @@ if __name__ == "__main__":
     if sys.argv[2] == '*':
         pass
     result = oper[sys.argv[2]](int((sys.argv[1])), int(sys.argv[3]))
-    print(f'{sys.argv[1]} {sys.argv[2]} {sys.argv[3]} = {result}')
+    print('{} {} {} = {}'.format(sys.argv[1], sys.argv[2],
+                                 sys.argv[3], result))
