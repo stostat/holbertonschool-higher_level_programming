@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     """
-    :param roman_string:
-    :return: te integer value of a roman number in arabic decimal
+    param roman_string:
+    return: te integer value of a roman number in arabic decimal
     """
     roman_dic = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
     num_sum = 0
