@@ -2,7 +2,7 @@
 """Print square, given an integer."""
 
 
-def print_square(size):
+def print_square(size=6):
     """Print square, given an integer."""
     if not isinstance(size, int):
         raise TypeError("size must be an integer")

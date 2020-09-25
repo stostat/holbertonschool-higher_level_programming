@@ -28,7 +28,7 @@ tests with only one value
     >>> add_integer(2)
     100
 
-:: 
+::
 test with no value or bad syntax
 ::
 
@@ -71,7 +71,7 @@ Test with more arguments
     Traceback (most recent call last):
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given
 
-    
+
     >>> add_integer(1, "ninety", 3)
     Traceback (most recent call last):
     TypeError: add_integer() takes from 1 to 2 positional arguments but 3 were given

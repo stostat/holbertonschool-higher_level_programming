@@ -74,13 +74,13 @@ Valid cases:
     <BLANKLINE>
     .
     <BLANKLINE>
-    
+
     >>> text_indentation("?Betty.")
     ?
     <BLANKLINE>
     Betty.
     <BLANKLINE>
-    
+
     >>> text_indentation("\n\n.\n\n:?")
     <BLANKLINE>
     <BLANKLINE>
@@ -118,4 +118,3 @@ Invalidid cases:
     >>> text_indentation({"a": 1, "b": 2})
     Traceback (most recent call last):
     TypeError: text must be a string
-    
