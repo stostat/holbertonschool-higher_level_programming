@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Add two integers."""
+"""Module that adds two integers."""
 
 
 if __name__ == "__main__":

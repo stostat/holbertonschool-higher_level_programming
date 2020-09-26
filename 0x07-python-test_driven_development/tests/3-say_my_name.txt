@@ -11,6 +11,10 @@ Usage
 ``say_my_name()`` prints first and last name.
 
 ::
+
+    >>> say_my_name = __import__("3-say_my_name").say_my_name
+
+::
 Test with valid arguments:
 ::
 	>>> say_my_name("John", "Doe")
@@ -26,7 +30,7 @@ Test with valid arguments:
     My name is
 
     >>> say_my_name("     ")
-    My name is
+    My name is       
 
 ::
 Invalid arguments:

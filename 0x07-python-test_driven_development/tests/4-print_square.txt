@@ -11,6 +11,10 @@ Usage
 ``print_square()`` prints a square given an integer.
 
 ::
+
+    >>> print_square = __import__("4-print_square").print_square
+
+::
 Valid arguments
 ::
     >>> print_square(0)
@@ -25,16 +29,16 @@ Valid arguments
     #
 
     >>> print_square(0xA)
-    ############
-    ############
-    ############
-    ############
-    ############
-    ############
-    ############
-    ############
-    ############
-    ############
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
 
 ::
 Invalid arguments
@@ -61,7 +65,7 @@ Invalid arguments
 
     >>> print_square(float('holi'))
     Traceback (most recent call last):
-    TypeError: size must be an integer
+    ValueError: could not convert string to float: 'holi'
 
     >>> print_square(None)
     Traceback (most recent call last):

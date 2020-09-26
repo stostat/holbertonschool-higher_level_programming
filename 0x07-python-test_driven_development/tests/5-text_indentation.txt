@@ -13,26 +13,22 @@ Valid cases:
     Betty Holberton
 
     >>> text_indentation("Holberton          ")
-    Holberton
+    Holberton          
 
     >>> text_indentation("        Betty")
-    Betty
+            Betty
 
     >>> text_indentation("")
 
     >>> text_indentation("      ")
-
+    <BLANKLINE>
     >>> text_indentation("Betty: Holberton")
     Betty:
-    <BLANKLINE>
-    Holberton
-
+     Holberton
     >>> text_indentation("      ?:  :  ")
-    ?
-    <BLANKLINE>
+          ?
     :
-    <BLANKLINE>
-    :
+      :
     <BLANKLINE>
 
     >>> text_indentation("\n")
@@ -47,54 +43,41 @@ Valid cases:
     <BLANKLINE>
 
     >>> text_indentation("Betty : John   ? Holberton.  School  ")
-    Betty:
-    <BLANKLINE>
-    John?
-    <BLANKLINE>
-    Holberton.
-    <BLANKLINE>
-    School
+    Betty :
+     John   ?
+     Holberton.
+      School  
 
     >>> text_indentation(".?:  .??:?.  ")
     .
-    <BLANKLINE>
     ?
-    <BLANKLINE>
     :
-    <BLANKLINE>
-    .
-    <BLANKLINE>
+      .
     ?
-    <BLANKLINE>
     ?
-    <BLANKLINE>
     :
-    <BLANKLINE>
     ?
-    <BLANKLINE>
     .
     <BLANKLINE>
 
     >>> text_indentation("?Betty.")
     ?
-    <BLANKLINE>
     Betty.
-    <BLANKLINE>
-
     >>> text_indentation("\n\n.\n\n:?")
     <BLANKLINE>
     <BLANKLINE>
     .
     <BLANKLINE>
     <BLANKLINE>
-    <BLANKLINE>
     :
-    <BLANKLINE>
     ?
-    <BLANKLINE>
+
 ::
+
 Invalidid cases:
+
 ::
+
     >>> text_indentation(None)
     Traceback (most recent call last):
     TypeError: text must be a string

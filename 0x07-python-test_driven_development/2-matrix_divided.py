@@ -2,6 +2,11 @@
 """function that divides all elements of a matrix."""
 
 
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
+
+
 def matrix_divided(matrix, div):
     """Divide all elements of a matrix."""
     if not matrix:
