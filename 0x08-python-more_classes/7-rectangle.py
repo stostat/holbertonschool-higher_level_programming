@@ -58,7 +58,7 @@ class Rectangle:
             return ""
 
         return (self.__height * ((self.__width * str(self.print_symbol))
-                + '\n'))[:-1]
+                                 + '\n'))[:-1]
 
     def __repr__(self):
         """Return string of #."""
