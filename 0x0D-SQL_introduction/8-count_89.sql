@@ -1,2 +1,2 @@
 -- selector
-SELECT * FROM first_table WHERE id = 89;
+SELECT id, COUNT(*) FROM first_table WHERE id = 89;
