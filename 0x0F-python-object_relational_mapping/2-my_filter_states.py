@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """Filter by input"""
-
-
 if __name__ == "__main__":
     import MySQLdb
     import sys
