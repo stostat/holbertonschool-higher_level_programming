@@ -12,7 +12,6 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
     session = Session(bind=engine)
-    query = session.query(State)
-
-    for state in query:
-        print(f"{state.id}: {state.name}")
+ 
+    for instance in session.query(State).order_by(State.id):
+        print("{}: {}".format(instance.id, instance.name))
