@@ -13,9 +13,8 @@ if __name__ == "__main__":
                            pool_pre_ping=True)
     session = Session(bind=engine)
 
-    query = session.query(State).filter(State.name.like(sys.argv[4]))
+    query = session.query(State).filter(State.name == sys.argv[4]).first()
     if query is None:
-        print("Nothing")
+        print('Not found')
     else:
-        for instance in query:
-            print("{}".format(instance.id))
+        print(query.id)
