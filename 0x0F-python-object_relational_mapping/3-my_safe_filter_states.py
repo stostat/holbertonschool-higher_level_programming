@@ -9,7 +9,7 @@ def esc_chars(string):
         for element in esc_array:
             if element in string:
                 string = string.replace(element, "\\" + element)
-    return string
+    return stringcode
 
 
 if __name__ == "__main__":
