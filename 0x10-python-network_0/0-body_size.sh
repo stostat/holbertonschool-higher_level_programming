@@ -1,3 +1,3 @@
 #!/bin/bash
-"""curl bash"""
-curl "$1" -d
+#curl bash for body size
+curl -s "$1" | wc -c
